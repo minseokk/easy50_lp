@@ -1,7 +1,7 @@
-import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { NextPage } from "next/types";
 
 const Application: NextPage = () => {
   return (
