@@ -16,7 +16,7 @@ const TestFeature: NextPage = () => {
             가져주셔서 진심으로 감사합니다. 이메일 주소를 남겨주시면 서비스 무료
             이용 쿠폰을 보내드리겠습니다. 감사합니다.
           </p>
-          <form onSubmit={() => {}} className="w-full p-4">
+          <form className="w-full p-4">
             <div className="mb-6">
               <label className="mb-2 block text-lg">이메일</label>
               <input
