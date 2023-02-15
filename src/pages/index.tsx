@@ -1,5 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -20,12 +21,14 @@ const Home: NextPage = () => {
           <h2 className="text-xl">후기</h2>
         </div>
         <div className="flex w-full justify-center">
-          <button
-            type="submit"
-            className="mt-6 flex items-center justify-center rounded-md border border-transparent bg-yellow-400 py-3 px-8 text-base font-medium text-white hover:bg-yellow-500"
-          >
-            무료 체험하러 가기
-          </button>
+          <Link href={"/application"}>
+            <button
+              type="button"
+              className="mt-6 flex items-center justify-center rounded-md border border-transparent bg-yellow-400 py-3 px-8 text-base font-medium text-white hover:bg-yellow-500"
+            >
+              무료 체험하러 가기
+            </button>
+          </Link>
         </div>
       </main>
     </>
