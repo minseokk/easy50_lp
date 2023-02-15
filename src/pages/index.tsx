@@ -1,5 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 
 const Home: NextPage = () => {
@@ -17,8 +18,17 @@ const Home: NextPage = () => {
             완벽한 안전보건관리 업무체계를 통해 경력 없이도 누구나 쉽고 편하게
           </p>
         </div>
-        <div>
-          <h2 className="text-xl">후기</h2>
+        <div className="flex w-full items-center justify-center">
+          <div className="relative aspect-square w-full max-w-xl">
+            <Image
+              src={"/demo.png"}
+              alt={"Servie Demo"}
+              fill
+              style={{
+                objectFit: "contain",
+              }}
+            />
+          </div>
         </div>
         <div className="flex w-full justify-center">
           <Link href={"/application"}>

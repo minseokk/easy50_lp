@@ -27,7 +27,7 @@ const Application: NextPage = () => {
         </div>
         <h1 className="text-3xl">기능 안내</h1>
         <div className="flex w-full flex-wrap justify-center space-x-4 space-y-4">
-          <Link href={"/application/features"}>
+          <Link href={"/application/features/test"}>
             <button
               type="button"
               className="flex h-24 w-48 items-center justify-center rounded-md bg-gray-200 shadow-md"
