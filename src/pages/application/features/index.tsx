@@ -5,37 +5,40 @@ import { useRef, useState } from "react";
 
 const TestFeature = () => {
   const router = useRouter();
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
   const [sending, setSending] = useState(false);
 
-  const subimit = async (event)=> {
+  const subimit = (event: React.FormEvent<HTMLFormElement>) => {
     if (!sending) {
       event.preventDefault();
       setSending(true);
-      await sendEmail(event);
-      setSending(false);
+      sendEmail(event);
     }
   };
 
-  const sendEmail = async (event) => {
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        event.target,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log(result);
-          setSending(false);
-          router.push(`/application/submitted`);
-        },
-        (error) => {
-          alert(`다시 시도해 주세요. \nERROR: ${error.text}`);
-          setSending(false);
-        }
-      );
+  const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
+    if (
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+    ) {
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          event.currentTarget,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          async (result) => {
+            console.log(result);
+            setSending(false);
+            await router.push(`/application/submitted`);
+          },
+          (error) => {
+            setSending(false);
+          }
+        );
+    }
   };
 
   return (
@@ -51,10 +54,10 @@ const TestFeature = () => {
             이용 쿠폰을 보내드리겠습니다. 감사합니다.
           </p>
           <form ref={form} className="w-full p-4" onSubmit={subimit}>
-            <input 
-              type="text" 
-              name="feature" 
-              value={router.query.feature} 
+            <input
+              type="text"
+              name="feature"
+              value={router.query.feature}
               readOnly
               className="hidden"
             />
@@ -84,8 +87,9 @@ const TestFeature = () => {
               disabled={sending}
               className={
                 sending
-                ? "mt-6 flex items-center justify-center rounded-md border border-transparent bg-yellow-500 py-3 px-8 text-base font-medium text-white "
-                : "mt-6 flex items-center justify-center rounded-md border border-transparent bg-yellow-400 py-3 px-8 text-base font-medium text-white hover:bg-yellow-500"}
+                  ? "mt-6 flex items-center justify-center rounded-md border border-transparent bg-yellow-500 py-3 px-8 text-base font-medium text-white "
+                  : "mt-6 flex items-center justify-center rounded-md border border-transparent bg-yellow-400 py-3 px-8 text-base font-medium text-white hover:bg-yellow-500"
+              }
             >
               제출
             </button>
