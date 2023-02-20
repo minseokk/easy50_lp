@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const TestFeature = () => {
   const router = useRouter();
@@ -55,6 +55,7 @@ const TestFeature = () => {
               type="text" 
               name="feature" 
               value={router.query.feature} 
+              readOnly
               className="hidden"
             />
             <div className="mb-6">
@@ -83,7 +84,7 @@ const TestFeature = () => {
               disabled={sending}
               className={
                 sending
-                ? "mt-6 flex items-center justify-center rounded-md border border-transparent bg-yellow-500 py-3 px-8 text-base font-medium text-white"
+                ? "mt-6 flex items-center justify-center rounded-md border border-transparent bg-yellow-500 py-3 px-8 text-base font-medium text-white "
                 : "mt-6 flex items-center justify-center rounded-md border border-transparent bg-yellow-400 py-3 px-8 text-base font-medium text-white hover:bg-yellow-500"}
             >
               제출
