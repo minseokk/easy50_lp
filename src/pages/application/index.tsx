@@ -24,7 +24,7 @@ const Application: NextPage = () => {
           </div>
         </div>
         <h1 className="text-3xl">기능 안내</h1>
-        <div className="flex w-full flex-wrap justify-center space-x-4 space-y-4">
+        <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-4">
           <Link href={"/application/features?feature=안전관리체계_업무"}>
             <button
               type="button"
