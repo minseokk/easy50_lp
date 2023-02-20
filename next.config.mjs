@@ -20,5 +20,7 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+
+  NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
 };
 export default config;
