@@ -33,6 +33,12 @@ const Home: NextPage = () => {
             />
           </div>
         </div>
+        <div>
+          <p>
+            안전 담당자라면 피할 수 없는 귀찮은 서류 작업과 문서 보관, 편안50을
+            통해 쉽고 편하게 일하세요.
+          </p>
+        </div>
         <div className="flex w-full justify-center">
           <Link href={"/application"}>
             <button
@@ -42,6 +48,81 @@ const Home: NextPage = () => {
               무료 체험하러 가기
             </button>
           </Link>
+        </div>
+        <div className="w-full">
+          <table className="m-auto w-full table-auto border-collapse">
+            <tbody>
+              <tr>
+                <td className="border border-yellow-400">
+                  The Sliding Mr. Bones (Next Stop, Pottersville)
+                </td>
+                <td>
+                  <ul>
+                    <li>안전보건경영 방침 수립</li>
+                    <li>안전관리 계획 수립과 수행에 대한 기록</li>
+                    <li>현장 안전메뉴얼 수립 및 수행 기록</li>
+                    <li>비상대응대책 매뉴얼</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>위험성평가</td>
+                <td>
+                  <ul>
+                    <li>위험성 평가 수행 및 기록</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>종사자 의견청취</td>
+                <td>
+                  <ul>
+                    <li>안전에 대한 종사자 설문 설계와 취합, 서류화, 보관</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>위험성평가</td>
+                <td>
+                  <ul>
+                    <li>위험성 평가 수행 및 기록</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>위험성평가</td>
+                <td>
+                  <ul>
+                    <li>위험성 평가 수행 및 기록</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>위험성평가</td>
+                <td>
+                  <ul>
+                    <li>위험성 평가 수행 및 기록</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>위험성평가</td>
+                <td>
+                  <ul>
+                    <li>위험성 평가 수행 및 기록</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>위험성평가</td>
+                <td>
+                  <ul>
+                    <li>위험성 평가 수행 및 기록</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </main>
     </>
