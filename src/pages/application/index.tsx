@@ -24,6 +24,9 @@ const Application: NextPage = () => {
           </div>
         </div>
         <h1 className="text-3xl">기능 안내</h1>
+        <div>
+          <p>아래 버튼 중 가장 기대되는 기능을 선택해주세요.</p>
+        </div>
         <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-4">
           <Link href={"/application/features?feature=안전관리체계_업무"}>
             <button
@@ -86,7 +89,15 @@ const Application: NextPage = () => {
               type="button"
               className="flex h-24 w-full items-center justify-center rounded-md bg-gray-200 shadow-md"
             >
-              <p className="">안전 미팅</p>
+              <p className="">안전 회의 및 TBM</p>
+            </button>
+          </Link>
+          <Link href={"/application/features?feature=데이터_저장소"}>
+            <button
+              type="button"
+              className="flex h-24 w-full items-center justify-center rounded-md bg-gray-200 shadow-md"
+            >
+              <p className="">데이터 저장소</p>
             </button>
           </Link>
         </div>
