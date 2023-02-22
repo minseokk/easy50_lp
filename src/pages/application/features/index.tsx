@@ -161,6 +161,145 @@ const TestFeature = () => {
               </div>
             </div>
           )}
+          {router.query.feature === "종사자_의견청취" && (
+            <div className="w-full">
+              <div className="mb-6 w-full">
+                <ul>
+                  <li>안전에 대한 종사자 설문 설계와 취합, 서류화, 보관</li>
+                </ul>
+              </div>
+            </div>
+          )}
+          {router.query.feature === "교육" && (
+            <div className="w-full">
+              <div className="mb-6 w-full">
+                <ul>
+                  <li>안전교육 계획, 수행 및 캠페인 추진에 대한 기록</li>
+                </ul>
+              </div>
+              <div className="mb-6 w-full">
+                <h2 className="text-3xl">참고 사진</h2>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-square w-full max-w-xl">
+                    <Image
+                      src={"/education_img1.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-square w-full max-w-xl">
+                    <Image
+                      src={"/education_img2.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          {router.query.feature === "산업재해_대응" && (
+            <div className="w-full">
+              <div className="mb-6 w-full">
+                <ul>
+                  <li>내부 통계 기록을 활용한 원인조사</li>
+                  <li>재발방지대책 수립</li>
+                  <li>내부 재해 상황</li>
+                </ul>
+              </div>
+              <div className="mb-6 w-full">
+                <h2 className="text-3xl">참고 사진</h2>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-square w-full max-w-xl">
+                    <Image
+                      src={"/disastresponse_img1.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-square w-full max-w-xl">
+                    <Image
+                      src={"/disastresponse_img2.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          {router.query.feature === "산업재해_통계" && (
+            <div className="w-full">
+              <div className="mb-6 w-full">
+                <ul>
+                  <li>KOSHA 산업재해 통계 자료 확인 링크</li>
+                </ul>
+              </div>
+            </div>
+          )}
+          {router.query.feature === "법령_안내" && (
+            <div className="w-full">
+              <div className="mb-6 w-full">
+                <ul>
+                  <li>산업안전보건법</li>
+                  <li>중대재해처벌법</li>
+                  <li>법률 준수 사항에 대한 기록</li>
+                </ul>
+              </div>
+            </div>
+          )}
+          {router.query.feature === "안전_미팅" && (
+            <div className="w-full">
+              <div className="mb-6 w-full">
+                <ul>
+                  <li>회의 안건 공유</li>
+                  <li>회의록 작성</li>
+                  <li>회의 내용 열람</li>
+                </ul>
+              </div>
+              <div className="mb-6 w-full">
+                <h2 className="text-3xl">참고 사진</h2>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-square w-full max-w-xl">
+                    <Image
+                      src={"/meeting_img1.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          {router.query.feature === "데이터_저장소" && (
+            <div className="w-full">
+              <div className="mb-6 w-full">
+                <ul>
+                  <li>모든 데이터 열람</li>
+                  <li>간편 서류화 기능</li>
+                </ul>
+              </div>
+            </div>
+          )}
           <p>
             안녕하세요, 현재 서비스 준비 중 입니다. 저희 서비스에 관심을
             가져주셔서 진심으로 감사합니다. 이메일 주소를 남겨주시면 서비스 무료
