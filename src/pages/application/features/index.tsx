@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import Image from "next/image";
 
 const TestFeature = () => {
   const router = useRouter();
@@ -48,6 +49,114 @@ const TestFeature = () => {
       </Head>
       <main className="flex min-h-screen w-full max-w-4xl flex-col items-start justify-start space-y-4 p-4">
         <div className="w-full">
+          <h2>내용</h2>
+          {router.query.feature === "안전관리체계_업무" && (
+            <div className="w-full">
+              <ul>
+                <li>안전보건경영 방침 수립</li>
+                <li>안전관리 계획 수립과 수행에 대한 기록</li>
+                <li>현장 안전메뉴얼 수립 및 수행 기록</li>
+                <li>비상대응대책 매뉴얼</li>
+              </ul>
+              <div>
+                <h2>참고 사진</h2>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-video w-full max-w-xl">
+                    <Image
+                      src={"/safetyjob_img1.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-video w-full max-w-xl">
+                    <Image
+                      src={"/safetyjob_img2.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-video w-full max-w-xl">
+                    <Image
+                      src={"/safetyjob_img3.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-square w-full max-w-xl">
+                    <Image
+                      src={"/safetyjob_img4.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          {router.query.feature === "위험성평가" && (
+            <div className="w-full">
+              <ul>
+                <li>위험성 평가 수행 및 기록</li>
+              </ul>
+              <div>
+                <h2>참고 사진</h2>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-video w-full max-w-xl">
+                    <Image
+                      src={"/riskassess_img1.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-video w-full max-w-xl">
+                    <Image
+                      src={"/riskassess_img2.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex w-full items-center justify-center">
+                  <div className="relative aspect-video w-full max-w-xl">
+                    <Image
+                      src={"/riskassess_img3.png"}
+                      alt={"Servie Demo"}
+                      fill
+                      style={{
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
           <p>
             안녕하세요, 현재 서비스 준비 중 입니다. 저희 서비스에 관심을
             가져주셔서 진심으로 감사합니다. 이메일 주소를 남겨주시면 서비스 무료
