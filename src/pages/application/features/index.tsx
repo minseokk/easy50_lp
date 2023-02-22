@@ -49,17 +49,19 @@ const TestFeature = () => {
       </Head>
       <main className="flex min-h-screen w-full max-w-4xl flex-col items-start justify-start space-y-4 p-4">
         <div className="w-full">
-          <h2>내용</h2>
+          <h2 className="text-3xl">내용</h2>
           {router.query.feature === "안전관리체계_업무" && (
             <div className="w-full">
-              <ul>
-                <li>안전보건경영 방침 수립</li>
-                <li>안전관리 계획 수립과 수행에 대한 기록</li>
-                <li>현장 안전메뉴얼 수립 및 수행 기록</li>
-                <li>비상대응대책 매뉴얼</li>
-              </ul>
-              <div>
-                <h2>참고 사진</h2>
+              <div className="mb-6 w-full">
+                <ul>
+                  <li>안전보건경영 방침 수립</li>
+                  <li>안전관리 계획 수립과 수행에 대한 기록</li>
+                  <li>현장 안전메뉴얼 수립 및 수행 기록</li>
+                  <li>비상대응대책 매뉴얼</li>
+                </ul>
+              </div>
+              <div className="mb-6 w-full">
+                <h2 className="text-3xl">참고 사진</h2>
                 <div className="flex w-full items-center justify-center">
                   <div className="relative aspect-video w-full max-w-xl">
                     <Image
@@ -113,11 +115,13 @@ const TestFeature = () => {
           )}
           {router.query.feature === "위험성평가" && (
             <div className="w-full">
-              <ul>
-                <li>위험성 평가 수행 및 기록</li>
-              </ul>
-              <div>
-                <h2>참고 사진</h2>
+              <div className="mb-6 w-full">
+                <ul>
+                  <li>위험성 평가 수행 및 기록</li>
+                </ul>
+              </div>
+              <div className="mb-6 w-full">
+                <h2 className="text-3xl">참고 사진</h2>
                 <div className="flex w-full items-center justify-center">
                   <div className="relative aspect-video w-full max-w-xl">
                     <Image
