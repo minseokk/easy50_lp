@@ -254,6 +254,7 @@ const TestFeature = () => {
                       className="text-blue-600 underline"
                       href="https://www.kosha.or.kr/kosha/data/industrialDisasterStatistics.do#/a"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       링크
                     </a>
