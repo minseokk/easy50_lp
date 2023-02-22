@@ -248,7 +248,16 @@ const TestFeature = () => {
             <div className="w-full">
               <div className="mb-6 w-full">
                 <ul>
-                  <li>KOSHA 산업재해 통계 자료 확인 링크</li>
+                  <li>
+                    KOSHA 산업재해 통계 자료 확인{" "}
+                    <a
+                      className="text-blue-600 underline"
+                      href="https://www.kosha.or.kr/kosha/data/industrialDisasterStatistics.do#/a"
+                      target="_blank"
+                    >
+                      링크
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
