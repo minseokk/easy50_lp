@@ -16,8 +16,10 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex min-h-screen w-full max-w-4xl flex-col items-start justify-start p-4">
         <div>
-          <h1 className="text-6xl">안전 담당자를 위한 최고의 가이드 툴</h1>
-          <p className="text-3xl text-gray-600">
+          <h1 className="break-keep text-6xl">
+            안전 담당자를 위한 최고의 가이드 툴
+          </h1>
+          <p className="break-keep text-3xl text-gray-600">
             완벽한 안전보건관리 업무체계를 통해 경력 없이도 누구나 쉽고 편하게
           </p>
         </div>
@@ -34,7 +36,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div>
-          <p>
+          <p className="break-keep">
             안전 담당자라면 피할 수 없는 귀찮은 서류 작업과 문서 보관, 편안50을
             통해 쉽고 편하게 일하세요.
           </p>
@@ -158,7 +160,7 @@ const Home: NextPage = () => {
         </div>
         <div className="mb-12 w-full">
           <h2 className="text-3xl">데이터 보관 안내</h2>
-          <p>
+          <p className="break-keep">
             모든 안전보건 활동 데이터는 3년 이상 편안50 서버에 안전하게
             보관합니다. 또한, 산업재해 또는 중대재해 발생 시 간편하게
             안전보건체계 구축 증빙자료를 제출할 수 있습니다.
